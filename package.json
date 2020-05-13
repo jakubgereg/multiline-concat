@@ -1,0 +1,8 @@
+{
+  "name": "multiline-concat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wramp/multiline-concat.git",
+  "author": "Jakub Gereg",
+  "license": "MIT"
+}
