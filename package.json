@@ -1,8 +1,20 @@
 {
   "name": "multiline-concat",
+  "description": "Concatenation of multi-lined art side-by-side.",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/wramp/multiline-concat.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wramp/multiline-concat.git"
+  },
+  "keywords": [
+    "multiline",
+    "concat"
+  ],
   "author": "Jakub Gereg",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wramp/multiline-concat/issues"
+  },
+  "homepage": "https://github.com/wramp/multiline-concat#readme"
 }
