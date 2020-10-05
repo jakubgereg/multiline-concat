@@ -12,44 +12,83 @@ or
 npm install multiline-concat
 ```
 
+## Usage
+
+```js
+let mConcat = require("multiline-concat");
+```
+
+## API
+
+### mConcat(st1, str2, separator)
+
 ## Example
+
+### Making Table from multiple columns
 
 ```js
 let mConcat = require("multiline-concat");
 
-let card1 = `
-┌─────────┐
-│A        │
-│         |
-│         │
-│    ♥    │
-│         │
-│         │
-│        A│
-└─────────┘`;
+let cName = `
+ Name     |
+-----------
+ Peter    |
+ Jonathan |
+ Alois    |
+ Ruby     |`;
 
-let card2 = `
-┌─────────┐
-│░░░░░░░░░│
-│░░░░░░░░░│
-│░░░░░░░░░│
-│░░░░░░░░░│
-│░░░░░░░░░│
-│░░░░░░░░░│
-│░░░░░░░░░│
-└─────────┘`;
+let cAge = `
+ Age      |
+-----------
+ 23       |
+ 18       |
+ 33       |
+ 42       |`;
 
-console.log(mConcat(card1, card2));
+console.log(mConcat(cName, cAge));
 
 //console.log:
 
-// ┌─────────┐ ┌─────────┐
-// │A        │ │░░░░░░░░░│
-// │         | │░░░░░░░░░│
-// │         │ │░░░░░░░░░│
-// │    ♥    │ │░░░░░░░░░│
-// │         │ │░░░░░░░░░│
-// │         │ │░░░░░░░░░│
-// │        A│ │░░░░░░░░░│
-// └─────────┘ └─────────┘
+// | Name     || Age      |
+// ------------------------
+// | Peter    || 23       |
+// | Jonathan || 18       |
+// | Alois    || 33       |
+// | Ruby     || 42       |
+
+```
+
+### Concate multiline string with different row numbers
+
+```js
+let mConcat = require("multiline-concat");
+
+let first = `
+ ^
+ |
+ |
+`;
+
+let second = `
+
+^
+|
+|
+|
+|
+|
+|`;
+
+console.log(mConcat(first, second, " "));
+
+//console.log:
+
+//  ^ 
+//  | ^
+//  | |
+//  |
+//  |
+//  |
+//  |
+//  |
 ```
