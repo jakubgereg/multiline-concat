@@ -1,6 +1,6 @@
 # Multiline concat
 
-Concatenation of multi-lined art side-by-side.
+Concatenation of multi-lined strings side-by-side (line-by-line).
 
 ## Install
 
